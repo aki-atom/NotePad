@@ -1,0 +1,22 @@
+<html>
+    <body>
+		　<h2>メモ帳アプリ</h2>
+        <input type="text" id="id-memo-text">
+        <button id="id-add-memo">メモを追加する</button>
+        <button id="id-delete-memo">メモを削除する</button>
+		<div id="id-memo-list"></div>
+
+		<script>
+			addBtn = document.getElementById("id-add-memo")
+			addBtn.addEventListener("click", AddMemo)
+
+			function AddMemo(event) {
+				memoText = document.getElementById("id-add-memo-text")
+				
+				memoList = document.getElementById("id-add-memo-list")
+				currentMemoList = memoList.innerHTML
+				memoList.innerHTML = currentMemoList + "・" + memoList.value + "<br>"
+			}
+		</script>	
+    </body>
+</html>
